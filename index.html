@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Hero Practice Projects</title>
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+        <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+        <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+     integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+        <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <!-- Header And Navbar -->
+    <header>
+        <div class="fixed-top">
+            <nav class="container navbar py-0">
+                <div class="container-fluid">
+                    <div class="navbar-brand">
+                        <img src="images/logo.png" width="40" class="d-inline-block" alt="">
+                        <h1 class="navbar-text d-inline-block ms-2">Programming Hero Practice Projects</h1>
+                    </div>
+                    <div class="me-5 d-inline-block">
+                        <h1 class="navbar-text mb-0 pb-1"> By 
+                            <a href="https://www.facebook.com/CoderBoySohel/" target="_blank">Sohel Islam Imran</a>
+                        </h1>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+        <!-- Main Content -->
+    <main class="container">
+                <!-- Inch To Feet -->
+        <section class="shadow p-3 my-5 mx-5 bg-body rounded-3">
+            <div class="ms-5 my-4">
+                <div class="d-inline text-center">
+                    <div class="title d-inline-block">
+                        <h3>1.<span class="ms-3">Inch To Feet</span></h3>
+                        <hr class="my-0">
+                        <p class="my-0">Module 14-2</p>
+                    </div>
+                </div>
+                <div class="input">
+                    <div class="input-group input-group-lg mt-5">
+                        <span class="input-group-text" id="inputGroup-sizing-lg">Inch</span>
+                        <input id="inch-input" type="number" placeholder="Enter your inch" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        <button onclick="inchToFeet()" class="btn btn-primary" type="button">Convert to Feet</button>
+                    </div>
+                    <h5 id="inch-error" class="text-center mt-3 text-danger"></h5>
+                </div>
+                <div id="inch-result" class="mt-5 d-none">
+                    <div class="d-inline">
+                        <div class="d-inline-block result">
+                            <h5>Result :</h5>
+                            <div class="p-3 d-flex justify-content-between">
+                                <h4 id="inch-to-feet" class="d-inline me-4"><span id="inch">0</span> inch = <span id="feet">0</span> Feet</h4>
+                                <button onclick="copyText('inch-to-feet')" class="btn btn-primary" type="button">Copy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <!-- Check whether a year is a Leap Year or not -->
+        <section class="shadow p-3 my-5 mx-5 bg-body rounded-3">
+            <div class="ms-5 my-4">
+                <div class="d-inline text-center">
+                    <div class="title d-inline-block">
+                        <h3>2.<span class="ms-3">Leap Year Checker</span></h3>
+                        <hr class="my-0">
+                        <p class="my-0">Module 14-4</p>
+                    </div>
+                </div>
+                <div class="input">
+                    <div class="input-group input-group-lg mt-5">
+                        <span class="input-group-text" id="inputGroup-sizing-lg">Year</span>
+                        <input id="year-input" type="number" placeholder="Enter a year" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        <button onclick="checkLeapYear()" class="btn btn-primary" type="button">Check Leap Year</button>
+                    </div>
+                    <h5 id="year-error" class="text-center mt-3 text-danger"></h5>
+                </div>
+                <div id="leap-year-result" class="mt-5 d-none">
+                    <div class="d-inline">
+                        <div class="d-inline-block result">
+                            <h5>Result :</h5>
+                            <div class="p-3 d-flex justify-content-between">
+                                <h4 id="leap-year" class="d-inline me-4"></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <!-- Calculate Factorial -->
+        <section class="shadow p-3 my-5 mx-5 bg-body rounded-3">
+            <div class="ms-5 my-4">
+                <div class="d-inline text-center">
+                    <div class="title d-inline-block">
+                        <h3>3.<span class="ms-3">Calculate Factorial</span></h3>
+                        <hr class="my-0">
+                        <p class="my-0">Module 14-5, 14-6, 14-7</p>
+                    </div>
+                </div>
+                <div class="input">
+                    <div class="input-group input-group-lg mt-5">
+                        <span class="input-group-text" id="inputGroup-sizing-lg">Number</span>
+                        <input id="factorial-input" type="number" placeholder="Enter a number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        <button onclick="factorial()" class="btn btn-primary" type="button">Get Factorial</button>
+                    </div>
+                    <h5 id="factorial-error" class="text-center mt-3 text-danger"></h5>
+                </div>
+                <div id="factorial-result" class="mt-5 d-none">
+                    <div class="d-inline">
+                        <div class="d-inline-block result">
+                            <h5>Result :</h5>
+                            <div class="p-3 d-flex justify-content-between">
+                                <h4 id="factorial" class="d-inline me-4"></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <!-- Create a Fibonacci Series -->
+        <section class="shadow p-3 my-5 mx-5 bg-body rounded-3">
+            <div class="ms-5 my-4">
+                <div class="d-inline text-center">
+                    <div class="title d-inline-block">
+                        <h3>4.<span class="ms-3">Fibonacci Series</span></h3>
+                        <hr class="my-0">
+                        <p class="my-0">Module 14-8, 14-9, 14-10</p>
+                    </div>
+                </div>
+                <div class="input">
+                    <div class="input-group input-group-lg mt-5">
+                        <span class="input-group-text" id="inputGroup-sizing-lg">Number</span>
+                        <input id="fibonacci-input" type="number" placeholder="Enter a number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        <button onclick="fibonacciSeries()" class="btn btn-primary" type="button">Get Fibonacci Series</button>
+                    </div>
+                    <h5 id="fibonacci-error" class="text-center mt-3 text-danger"></h5>
+                </div>
+                <div id="fibonacci-result" class="mt-5 d-none">
+                    <div class="d-inline">
+                        <div class="d-inline-block result">
+                            <h5>Result :</h5>
+                            <div class="p-3 d-flex justify-content-between">
+                                <h4 id="fibonacci" class="d-inline me-4 overflow-auto"></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <!-- Prime Number Checker -->
+        <section class="shadow p-3 my-5 mx-5 bg-body rounded-3">
+            <div class="ms-5 my-4">
+                <div class="d-inline text-center">
+                    <div class="title d-inline-block">
+                        <h3>5.<span class="ms-3">Prime Number Checker</span></h3>
+                        <hr class="my-0">
+                        <p class="my-0">Module 14-11</p>
+                    </div>
+                </div>
+                <div class="input">
+                    <div class="input-group input-group-lg mt-5">
+                        <span class="input-group-text" id="inputGroup-sizing-lg">Number</span>
+                        <input id="prime-num-input" type="number" placeholder="Enter a number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        <button onclick="primeNumChecker()" class="btn btn-primary" type="button">Check Prime Num</button>
+                    </div>
+                </div>
+                <div id="prime-num-result" class="mt-5 d-none">
+                    <div class="d-inline">
+                        <div class="d-inline-block result">
+                            <h5>Result :</h5>
+                            <div class="p-3 d-flex justify-content-between">
+                                <h4 id="prime-num" class="d-inline me-4"></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <!-- Swap variable -->
+        <section class="shadow p-3 my-5 mx-5 bg-body rounded-3">
+            <div class="ms-5 my-4">
+                <div class="d-inline text-center">
+                    <div class="title d-inline-block">
+                        <h3>6.<span class="ms-3">Swap variable</span></h3>
+                        <hr class="my-0">
+                        <p class="my-0">Module 15-2</p>
+                    </div>
+                </div>
+                <div class="input">
+                    <div class="input-group input-group-lg mt-5">
+                        <span class="input-group-text" id="inputGroup-sizing-lg">a</span>
+                        <input id="swap-input1" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        <span class="input-group-text" id="inputGroup-sizing-lg">b</span>
+                        <input id="swap-input2" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        <button onclick="Swap()" class="btn btn-primary" type="button">Swap</button>
+                    </div>
+                </div>
+                <div id="swap-result" class="mt-5 d-none">
+                    <div class="d-inline">
+                        <div class="d-inline-block result">
+                            <h5>Result :</h5>
+                            <div class="p-3 d-flex justify-content-between">
+                                <h4 id="swap" class="d-inline me-4"></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <!-- Random Number -->
+        <section class="shadow p-3 my-5 mx-5 bg-body rounded-3">
+            <div class="ms-5 my-4">
+                <div class="d-inline text-center">
+                    <div class="title d-inline-block">
+                        <h3>7.<span class="ms-3">Random Number</span></h3>
+                        <hr class="my-0">
+                        <p class="my-0">Module 15-3</p>
+                    </div>
+                </div>
+                <div class="input">
+                    <div class="input-group input-group-lg mt-5">
+                        <input id="random-num-input1" type="number" value="1" placeholder="From 1" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" readonly>
+                        <span class="input-group-text" id="inputGroup-sizing-lg">To</span>
+                        <input id="random-num-input2" type="number" placeholder="Enter a number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        <button onclick="getRandomNum()" class="btn btn-primary" type="button">Get Random Num</button>
+                    </div>
+                    <h5 id="random-num-error" class="text-center mt-3 text-danger"></h5>
+                </div>
+                <div id="random-num-result" class="mt-5 d-none">
+                    <div class="d-inline">
+                        <div class="d-inline-block result">
+                            <h5>Result :</h5>
+                            <div class="p-3 d-flex justify-content-between">
+                                <h4 id="random-num" class="d-inline me-4"></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <!-- Find the largest element of an array -->
+        <section class="shadow p-3 my-5 mx-5 bg-body rounded-3">
+            <div class="ms-5 my-4">
+                <div class="d-inline text-center">
+                    <div class="title d-inline-block">
+                        <h3>8.<span class="ms-3">Find The Max Num</span></h3>
+                        <hr class="my-0">
+                        <p class="my-0">Module 15-4, 15-5</p>
+                    </div>
+                </div>
+                <div class="input w-100">
+                    <div class="input-group input-group-lg mt-5">
+                        <span class="input-group-text" id="inputGroup-sizing-lg">Numbers</span>
+                        <input id="input-array-max" type="text" placeholder="Enter some numbers with separate by comma" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        <button onclick="getMaxNum()" class="btn btn-primary" type="button">Get Max Num</button>
+                    </div>
+                    <h5 id="max-num-error" class="text-center mt-3 text-danger"></h5>
+                </div>
+                <div id="max-result" class="mt-5 d-none">
+                    <div class="d-inline">
+                        <div class="d-inline-block result">
+                            <h5>Result :</h5>
+                            <div class="p-3 d-flex justify-content-between">
+                                <h4 id="max-num" class="d-inline me-4"></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <!-- Sum of all numbers in an array -->
+        <section class="shadow p-3 my-5 mx-5 bg-body rounded-3">
+            <div class="ms-5 my-4">
+                <div class="d-inline text-center">
+                    <div class="title d-inline-block">
+                        <h3>9.<span class="ms-3">Sum of Numbers</span></h3>
+                        <hr class="my-0">
+                        <p class="my-0">Module 15-6</p>
+                    </div>
+                </div>
+                <div class="input w-100">
+                    <div class="input-group input-group-lg mt-5">
+                        <span class="input-group-text" id="inputGroup-sizing-lg">Numbers</span>
+                        <input id="input-array-sum" type="text" placeholder="Enter some numbers with separate by comma" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        <button onclick="getSumOfNums()" class="btn btn-primary" type="button">Get Sum</button>
+                    </div>
+                    <h5 id="sum-error" class="text-center mt-3 text-danger"></h5>
+                </div>
+                <div id="sum-result" class="mt-5 d-none">
+                    <div class="d-inline">
+                        <div class="d-inline-block result">
+                            <h5>Result :</h5>
+                            <div class="p-3 d-flex justify-content-between">
+                                <h4 id="sum-num" class="d-inline me-4"></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <!-- Remove duplicate item from an array -->
+        <section class="shadow p-3 my-5 mx-5 bg-body rounded-3">
+            <div class="ms-5 my-4">
+                <div class="d-inline text-center">
+                    <div class="title d-inline-block">
+                        <h3>10.<span class="ms-3">Remove Duplicate</span></h3>
+                        <hr class="my-0">
+                        <p class="my-0">Module 15-7</p>
+                    </div>
+                </div>
+                <div class="input w-100">
+                    <div class="input-group input-group-lg mt-5">
+                        <span class="input-group-text" id="inputGroup-sizing-lg">Numbers</span>
+                        <input id="input-array-unique" type="text" placeholder="Enter some numbers with separate by comma" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        <button onclick="getUniqueNums()" class="btn btn-primary" type="button">Remove Duplicate</button>
+                    </div>
+                    <h5 id="unique-error" class="text-center mt-3 text-danger"></h5>
+                </div>
+                <div id="unique-result" class="mt-5 d-none">
+                    <div class="d-inline">
+                        <div class="d-inline-block result">
+                            <h5>Result :</h5>
+                            <div class="p-3 d-flex justify-content-between">
+                                <h4 id="unique-num" class="d-inline me-4"></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <!-- Count the number of words in a string -->
+        <section class="shadow p-3 my-5 mx-5 bg-body rounded-3">
+            <div class="ms-5 my-4">
+                <div class="d-inline text-center">
+                    <div class="title d-inline-block">
+                        <h3>11.<span class="ms-3">Count Words</span></h3>
+                        <hr class="my-0">
+                        <p class="my-0">Module 15-8</p>
+                    </div>
+                </div>
+                <div class="mt-4 w-100">
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Enter your paragraph</label>
+                        <textarea id="input-speech" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <button onclick="countWords()" class="btn btn-primary" type="button">Count Words</button>
+                    <h5 id="words-error" class="text-center mt-3 text-danger"></h5>
+                </div>
+                <div id="words-result" class="mt-5 d-none">
+                    <div class="d-inline">
+                        <div class="d-inline-block result">
+                            <h5>Result :</h5>
+                            <div class="p-3 d-flex justify-content-between">
+                                <h4 id="words-count" class="d-inline me-4"></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <!--  Reverse a String -->
+        <section class="shadow p-3 my-5 mx-5 bg-body rounded-3">
+            <div class="ms-5 my-4">
+                <div class="d-inline text-center">
+                    <div class="title d-inline-block">
+                        <h3>12.<span class="ms-3">Reverse a String</span></h3>
+                        <hr class="my-0">
+                        <p class="my-0">Module 15-9</p>
+                    </div>
+                </div>
+                <div class="mt-4 w-100">
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Enter your paragraph</label>
+                        <textarea id="input-reverse" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <button onclick="reverseString()" class="btn btn-primary" type="button">Reverse</button>
+                    <h5 id="reverse-error" class="text-center mt-3 text-danger"></h5>
+                </div>
+                <div id="reverse-result" class="mt-5 d-none">
+                    <div class="d-inline">
+                        <div class="d-inline-block result">
+                            <h5>Result :</h5>
+                            <div class="p-3 d-flex justify-content-between">
+                                <h4 id="reverse-count" class="d-inline me-4"></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                  <!-- Kilometer To Meter -->
+        <section class="shadow p-3 my-5 mx-5 bg-body rounded-3">
+            <div class="ms-5 my-4">
+                <div class="d-inline text-center">
+                    <div class="title d-inline-block">
+                        <h3>13.<span class="ms-3">Kilometer To Meter</span></h3>
+                        <hr class="my-0">
+                        <p class="my-0">Assignment : 3-1</p>
+                    </div>
+                </div>
+                <div class="input">
+                    <div class="input-group input-group-lg mt-5">
+                        <span class="input-group-text" id="inputGroup-sizing-lg">Kilometer</span>
+                        <input id="kilometer-input" type="number" placeholder="Enter your kilometer" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        <button onclick="kilometerToMeter()" class="btn btn-primary" type="button">Convert to Meter</button>
+                    </div>
+                    <h5 id="kilometer-error" class="text-center mt-3 text-danger"></h5>
+                </div>
+                <div id="kilometer-result" class="mt-5 d-none">
+                    <div class="d-inline">
+                        <div class="d-inline-block result">
+                            <h5>Result :</h5>
+                            <div class="p-3 d-flex justify-content-between">
+                                <h4 id="kilometer-to-Meter" class="d-inline me-4"><span id="kilometer">0</span> kilometer = <span id="meter">0</span> Meter</h4>
+                                <button onclick="copyText('kilometer-to-Meter')" class="btn btn-primary" type="button">Copy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <!-- Budget Calculator -->
+        <section class="shadow p-3 my-5 mx-5 bg-body rounded-3">
+            <div class="ms-5 my-4">
+                <div class="d-inline text-center">
+                    <div class="title d-inline-block">
+                        <h3>14.<span class="ms-3">Budget Calculator</span></h3>
+                        <hr class="my-0">
+                        <p class="my-0">Assignment : 3-2</p>
+                    </div>
+                </div>
+                <div class="input">
+                    <div class="input-group input-group-lg mt-5">
+                        <span class="input-group-text" id="inputGroup-sizing-lg">Watch</span>
+                        <input id="watch-input" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        <span class="input-group-text" id="inputGroup-sizing-lg">Phone</span>
+                        <input id="phone-input" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        <span class="input-group-text" id="inputGroup-sizing-lg">Laptop</span>
+                        <input id="laptop-input" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        <button onclick="budgetCalculator()" class="btn btn-primary" type="button">Total</button>
+                    </div>
+                    <h5 id="budget-error" class="text-center mt-3 text-danger"></h5>
+                </div>
+                <div id="budget-result" class="mt-5 d-none">
+                    <div class="d-inline">
+                        <div class="d-inline-block result">
+                            <h5>Result :</h5>
+                            <div class="p-3 d-flex justify-content-between">
+                                <h4 id="budget" class="d-inline me-4"></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <!-- Hotel Cost Calculator -->
+        <section class="shadow p-3 my-5 mx-5 bg-body rounded-3">
+            <div class="ms-5 my-4">
+                <div class="d-inline text-center">
+                    <div class="title d-inline-block">
+                        <h3>15.<span class="ms-3">Hotel Cost Calculator</span></h3>
+                        <hr class="my-0">
+                        <p class="my-0">Assignment : 3-3</p>
+                    </div>
+                </div>
+                <div class="input">
+                    <div class="input-group input-group-lg mt-5">
+                        <span class="input-group-text" id="inputGroup-sizing-lg">Day</span>
+                        <input id="day-input" type="number" placeholder="Enter your day" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        <button onclick="hotelCost()" class="btn btn-primary" type="button">Total Cost</button>
+                    </div>
+                    <h5 id="cost-error" class="text-center mt-3 text-danger"></h5>
+                </div>
+                <div id="cost-result" class="mt-5 d-none">
+                    <div class="d-inline">
+                        <div class="d-inline-block result">
+                            <h5>Result :</h5>
+                            <div class="p-3 d-flex justify-content-between">
+                                <h4 id="total-cost" class="d-inline me-4"></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <!-- Longest Friend Name -->
+        <section class="shadow p-3 my-5 mx-5 bg-body rounded-3">
+            <div class="ms-5 my-4">
+                <div class="d-inline text-center">
+                    <div class="title d-inline-block">
+                        <h3>16.<span class="ms-3">Longest Name</span></h3>
+                        <hr class="my-0">
+                        <p class="my-0">Assignment : 3-4</p>
+                    </div>
+                </div>
+                <div class="mt-4 w-100">
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Enter some names</label>
+                        <textarea id="names-input" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <button onclick="megaFriend()" class="btn btn-primary" type="button">Get Longest Name</button>
+                    <h5 id="longName-error" class="text-center mt-3 text-danger"></h5>
+                </div>
+                <div id="longName-result" class="mt-5 d-none">
+                    <div class="d-inline">
+                        <div class="d-inline-block result">
+                            <h5>Result :</h5>
+                            <div class="p-3 d-flex justify-content-between">
+                                <h4 id="longName" class="d-inline me-4"></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <!-- Develop a Simple Bank Website -->
+        <section class="shadow p-3 my-5 mx-5 bg-body rounded-3">
+            <div class="ms-5 my-4">
+                <div class="d-inline text-center">
+                    <div class="title d-inline-block">
+                        <h3>17.<span class="ms-3">Develop a Simple Bank Website</span></h3>
+                        <hr class="my-0">
+                        <p class="my-0">Module 19</p>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <a href="https://sohelislamimran.github.io/islami-bank/" target="_blank">
+                        <img class="w-100" src="images/Islami-Bank.png" alt="">
+                        <button  class="btn btn-primary ms-5" type="button">Click to Go</button>
+                    </a>
+                </div>
+            </div>
+        </section>
+                <!-- Shopping Cart, develop an interactive Cart -->
+        <section class="shadow p-3 my-5 mx-5 bg-body rounded-3">
+            <div class="ms-5 my-4">
+                <div class="d-inline text-center">
+                    <div class="title d-inline-block">
+                        <h3>18.<span class="ms-3">Shopping Cart Development</span></h3>
+                        <hr class="my-0">
+                        <p class="my-0">Module 19_5, 20</p>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <a href="https://sohelislamimran.github.io/shopping-cart/" target="_blank">
+                        <img class="w-100" src="images/Shopping-Cart.png" alt="">
+                        <button  class="btn btn-primary ms-5" type="button">Click to Go</button>
+                    </a>
+                </div>
+            </div>
+        </section>
+                <!-- Pin Generator And Verifier -->
+        <section class="shadow p-3 my-5 mx-5 bg-body rounded-3">
+            <div class="ms-5 my-4">
+                <div class="d-inline text-center">
+                    <div class="title d-inline-block">
+                        <h3>19.<span class="ms-3">Pin Generator And Verifier</span></h3>
+                        <hr class="my-0">
+                        <p class="my-0">Module 21_5-3, 21_5-4, 21_5-5, 21_5-6</p>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <a href="https://sohelislamimran.github.io/pin-matcher/" target="_blank">
+                        <img class="w-100" src="images/Pin-Generator.png" alt="">
+                        <button  class="btn btn-primary ms-5 mt-2" type="button">Click to Go</button>
+                    </a>
+                </div>
+            </div>
+        </section>
+                <!-- Weather App -->
+        <section class="shadow p-3 my-5 mx-5 bg-body rounded-3">
+            <div class="ms-5 my-4">
+                <div class="d-inline text-center">
+                    <div class="title d-inline-block">
+                        <h3>20.<span class="ms-3"></span>Weather App</h3>
+                        <hr class="my-0">
+                        <p class="my-0">Module 24_5-3</p>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <a href="https://sohelislamimran.github.io/weather-api/" target="_blank">
+                        <img class="w-100" src="images/Weather.png" alt="">
+                        <button  class="btn btn-primary ms-5 mt-2" type="button">Click to Go</button>
+                    </a>
+                </div>
+            </div>
+        </section>
+                <!-- World Tour -->
+        <section class="shadow p-3 my-5 mx-5 bg-body rounded-3">
+            <div class="ms-5 my-4">
+                <div class="d-inline text-center">
+                    <div class="title d-inline-block">
+                        <h3>21.<span class="ms-3"></span>World Tour</h3>
+                        <hr class="my-0">
+                        <p class="my-0">Module 25_5</p>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <a href="https://sohelislamimran.github.io/world-tour/" target="_blank">
+                        <img class="w-100" src="images/World-Tour.png" alt="">
+                        <button  class="btn btn-primary ms-5 mt-2" type="button">Click to Go</button>
+                    </a>
+                </div>
+            </div>
+        </section>
+                <!-- Hard Rock - Song Lyric App -->
+        <section class="shadow p-3 my-5 mx-5 bg-body rounded-3">
+            <div class="ms-5 my-4">
+                <div class="d-inline text-center">
+                    <div class="title d-inline-block">
+                        <h3>22.<span class="ms-3"></span>Hard Rock - Song Lyric App</h3>
+                        <hr class="my-0">
+                        <p class="my-0">Module 26_5</p>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <a href="https://sohelislamimran.github.io/hard-rock/" target="_blank">
+                        <img class="w-100" src="images/Hard-Rock.png" alt="">
+                        <button  class="btn btn-primary ms-5 mt-2" type="button">Click to Go</button>
+                    </a>
+                </div>
+            </div>
+        </section>
+                <!-- Hard Rock - Song Lyric App -->
+        <section class="shadow p-3 my-5 mx-5 bg-body rounded-3">
+            <div class="ms-5 my-4">
+                <div class="d-inline text-center">
+                    <div class="title d-inline-block">
+                        <h3>23.<span class="ms-3"></span>Debugging Devtool & Bug Fixing of Issue-Tracker</h3>
+                        <hr class="my-0">
+                        <p class="my-0">Module 29_5-1, 29_5-2</p>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <a href="https://sohelislamimran.github.io/issue-tracker/" target="_blank">
+                        <img class="w-100" src="images/Issue-Tracker.png" alt="">
+                        <button  class="btn btn-primary ms-5 mt-2" type="button">Click to Go</button>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+        <!-- Footer -->
+    <footer class="w-100">
+        <div class="copyright container-fluid">
+            <div class="social mb-1 text-center">
+                <a href="https://www.facebook.com/CoderBoySohel/" target="_blank"><i class="fab fa-facebook ms-3"></i></a>
+                <a href="https://github.com/SohelIslamImran" target="_blank"><i class="fab fa-github ms-3"></i></a>
+                <a href="https://www.linkedin.com/in/sohelislamimran/" target="_blank"><i class="fab fa-linkedin ms-3"></i></a>
+            </div>
+            <p>Copyright &copy; Sohel Islam Imran 2021, all rights reserved.</p>
+        </div>
+    </footer>
+        
+    <!-- External JS File -->
+    <script src="script.js"></script>
+</body>
+</html>
