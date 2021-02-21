@@ -77,6 +77,8 @@ const factorial = () => {
 //  Create a Fibonacci Series
 const fibonacciSeries = () => {
     const n = document.getElementById('fibonacci-input').value;
+    document.getElementById('fibonacci-result').classList.add('d-none');
+    document.getElementById('fibonacci-error').innerText = '';
 
     if (n === '') {
         document.getElementById('fibonacci-error').innerText = 'Please enter a number!';
@@ -235,7 +237,7 @@ const getUniqueNums = () => {
         }
 
     })
-    if (isNaN(unique)) {
+    if (unique == NaN) {
         document.getElementById('unique-error').innerText = 'Please enter a valid number!';
     }
     else {
